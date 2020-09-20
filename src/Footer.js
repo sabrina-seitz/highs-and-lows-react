@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="Footer">
+    <footer className="Footer">
       <a
         className="link-footer"
         href="https://github.com/sabrina-seitz/highs-and-lows-react"
@@ -21,6 +21,6 @@ export default function Footer() {
       >
         Sabrina Seitz
       </a>
-    </div>
+    </footer>
   );
 }

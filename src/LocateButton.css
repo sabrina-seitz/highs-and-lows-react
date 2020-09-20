@@ -1,0 +1,11 @@
+.Form .search-location {
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  position: relative;
+  bottom: 1.9px;
+}
+
+.Form .search-location:hover {
+  color: #dddddd;
+}

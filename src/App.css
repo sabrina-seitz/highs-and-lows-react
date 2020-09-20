@@ -1,16 +1,24 @@
-.container {
-  margin: 50px;
-  font-family: sans-serif;
-  text-align: center;
-  max-width: 450px;
-  margin: 0 auto;
-  padding-top: 50px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-h1 {
-  font-size: 45px;
-  color: black;
-  margin-bottom: 30px;
-  font-weight: 550;
-  font-family: "Montserrat Subrayada", sans-serif;
+@media (min-width: 576px) {
+  body {
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 360px;
 }

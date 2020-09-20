@@ -1,0 +1,16 @@
+.Player {
+  color: #28385e;
+  background: #a6caca;
+  padding: 20px;
+  border-radius: 40px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+
+@media (min-width: 576px) {
+  .Player {
+    padding: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+  }
+}

@@ -1,0 +1,9 @@
+.PlayerSpotify iframe {
+  width: 215px;
+}
+
+@media (min-width: 800px) {
+  .PlayerSpotify iframe {
+    width: 300px;
+  }
+}

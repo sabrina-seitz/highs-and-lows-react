@@ -1,16 +1,24 @@
-.Footer {
+footer {
   display: block;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 10px;
+  color: #28385e;
 }
 
-.Footer .link-footer {
-  color: #735bc1;
+@media (min-width: 576px) {
+  footer {
+    margin-top: 20px;
+  }
+}
+
+footer .link-footer {
+  color: #28385e;
   text-decoration: underline;
   transition: all 150ms ease-in-out;
 }
 
-.Footer .link-footer:hover {
-  color: #886ce4;
+footer .link-footer:hover {
+  color: #516c8d;
   text-decoration: none;
 }

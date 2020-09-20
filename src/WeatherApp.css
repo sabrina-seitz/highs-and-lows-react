@@ -1,0 +1,16 @@
+.WeatherApp {
+  padding: 20px;
+  color: #fff;
+  background: #28385e;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 5px;
+}
+
+@media (min-width: 576px) {
+  .WeatherApp {
+    padding: 50px;
+    margin: 50px 25px 0 0;
+  }
+}

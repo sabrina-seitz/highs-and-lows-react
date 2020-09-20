@@ -1,0 +1,22 @@
+.Head i {
+  font-size: 2.5rem;
+  float: left;
+}
+
+@media (min-width: 576px) {
+  .Head i {
+    font-size: 2.8rem;
+  }
+}
+
+.Head .today-temp {
+  font-size: 1.25rem;
+  font-weight: 500;
+  float: right;
+}
+
+@media (min-width: 576px) {
+  .Head .today-temp {
+    font-size: 1.4rem;
+  }
+}

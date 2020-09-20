@@ -1,0 +1,53 @@
+.Temp {
+  clear: both;
+  margin-top: 88px;
+}
+
+@media (min-width: 576px) {
+  .Temp {
+    margin-top: 115px;
+  }
+}
+
+.Temp h1 {
+  font-size: 6.4rem;
+  font-weight: 550;
+  display: inline;
+}
+
+@media (min-width: 576px) {
+  .Temp h1 {
+    font-size: 6.8rem;
+  }
+}
+
+.Temp .temp-units {
+  display: inline;
+  position: relative;
+  bottom: 57px;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+@media (min-width: 576px) {
+  .Temp .temp-units {
+    bottom: 60px;
+  }
+}
+
+.Temp .temp-units .active {
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  cursor: default;
+}
+
+.Temp .temp-units .active:hover {
+  text-decoration: none;
+}
+
+.Temp .temp-units .inactive {
+  text-decoration: none;
+  font-weight: 300;
+  color: #fff;
+}
