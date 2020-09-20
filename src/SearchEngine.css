@@ -1,0 +1,38 @@
+.SearchEngine h2 {
+  font-size: 28px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.SearchEngine form {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: square;
+  text-align: left;
+}
+
+li {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+img {
+  margin-bottom: -10px;
+}
+
+.Weather {
+  margin: 20px 0px;
+  color: white;
+  background: #b9b1e0;
+  padding: 20px;
+  border-radius: 40px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
