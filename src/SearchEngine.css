@@ -1,28 +1,28 @@
-form {
+.SearchEngine form {
   margin-bottom: 20px;
 }
 
-ul {
+.SearchEngine ul {
   list-style-type: square;
   text-align: left;
 }
 
-li {
+.SearchEngine li {
   font-size: 20px;
   font-weight: 100;
 }
 
-h3 {
+.SearchEngine h3 {
   font-size: 35px;
   font-weight: 500;
   font-family: "Montserrat Subrayada", sans-serif;
 }
 
-img {
+.SearchEngine img {
   margin-bottom: -10px;
 }
 
-.Weather {
+.SearchEngine {
   margin: 20px 0px;
   color: white;
   background: #b9b1e0;

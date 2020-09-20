@@ -49,7 +49,7 @@ export default function SearchEngine() {
     return (
       <div>
         {form}
-        <div className="Weather">
+        <div className="SearchEngine">
           <img src={weather.icon} alt={weather.description} />
           <h3 className="pull-left city">{weather.name}</h3>
           <ul>

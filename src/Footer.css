@@ -1,0 +1,16 @@
+.Footer {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.Footer .link-footer {
+  color: #735bc1;
+  text-decoration: underline;
+  transition: all 150ms ease-in-out;
+}
+
+.Footer .link-footer:hover {
+  color: #886ce4;
+  text-decoration: none;
+}

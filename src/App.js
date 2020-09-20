@@ -1,5 +1,6 @@
 import React from "react";
 import SearchEngine from "./SearchEngine";
+import Footer from "./Footer";
 import "./App.css";
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         Highs & Lows
       </h1>
       <SearchEngine />
+      <Footer />
     </div>
   );
 }
