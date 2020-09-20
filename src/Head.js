@@ -1,20 +1,16 @@
 import React from "react";
 import "./Head.css";
+import City from "./City";
 
 export default function Head() {
   let weatherData = {
-    iconClass: "fas fa-cloud",
-    alternativeName: "cloudy",
     tempMin: 14,
     tempMax: 19,
   };
 
   return (
     <div className="Head">
-      <i
-        className={weatherData.iconClass}
-        alt={weatherData.alternativeName}
-      ></i>
+      <City />
       <span className="today-temp">
         {weatherData.tempMin}°/{weatherData.tempMax}°
       </span>

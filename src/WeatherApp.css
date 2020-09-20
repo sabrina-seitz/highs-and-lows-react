@@ -14,3 +14,33 @@
     margin: 50px 25px 0 0;
   }
 }
+
+.WeatherApp .head .city {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  float: left;
+  margin-left: -15px;
+}
+
+.WeatherApp .icon i {
+  font-size: 12rem;
+  margin-top: 10px;
+}
+
+.WeatherApp .description {
+  font-size: 1.3rem;
+  margin-bottom: 7px;
+  text-transform: capitalize;
+  margin-bottom: -24px;
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+
+.WeatherApp .temp {
+  clear: both;
+  margin-bottom: -22px;
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 4.4rem;
+}

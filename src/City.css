@@ -1,17 +1,9 @@
 .City h2 {
   text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 1.25rem;
   margin-bottom: 0;
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
-}
-
-@media (min-width: 576px) {
-  .City h2 {
-    font-size: 3rem;
-    margin-top: 14px;
-  }
+  float: left;
 }

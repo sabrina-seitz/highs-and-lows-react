@@ -1,0 +1,10 @@
+.WeatherIcon i {
+  font-size: 10rem;
+  margin-top: 60px;
+}
+
+@media (min-width: 576px) {
+  .WeatherIcon i {
+    font-size: 10rem;
+  }
+}
