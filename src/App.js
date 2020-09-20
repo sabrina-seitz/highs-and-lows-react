@@ -5,7 +5,12 @@ import "./App.css";
 export default function App() {
   return (
     <div className="container">
-      <h1>Weather App</h1>
+      <h1>
+        <span role="img" aria-label="umbrella">
+          ☔
+        </span>{" "}
+        Highs & Lows
+      </h1>
       <SearchEngine />
     </div>
   );

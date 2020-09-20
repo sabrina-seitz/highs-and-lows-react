@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./SearchEngine.css";
 
-export default function WeatherSearch() {
+export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
@@ -51,7 +51,7 @@ export default function WeatherSearch() {
         {form}
         <div className="Weather">
           <img src={weather.icon} alt={weather.description} />
-          <h3 className="pull-left">{weather.name}</h3>
+          <h3 className="pull-left city">{weather.name}</h3>
           <ul>
             <li>Temperature: {Math.round(weather.temperature)}°C</li>
             <li>Description: {weather.description}</li>

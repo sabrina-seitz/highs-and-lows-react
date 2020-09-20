@@ -1,10 +1,4 @@
-.SearchEngine h2 {
-  font-size: 28px;
-  color: #6c757d;
-  font-weight: 600;
-}
-
-.SearchEngine form {
+form {
   margin-bottom: 20px;
 }
 
@@ -20,8 +14,8 @@ li {
 
 h3 {
   font-size: 35px;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Montserrat Subrayada", sans-serif;
 }
 
 img {

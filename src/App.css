@@ -8,8 +8,9 @@
 }
 
 h1 {
-  font-size: 55px;
+  font-size: 45px;
   color: black;
   margin-bottom: 30px;
-  font-weight: 700;
+  font-weight: 550;
+  font-family: "Montserrat Subrayada", sans-serif;
 }
