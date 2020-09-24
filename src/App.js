@@ -1,5 +1,4 @@
 import React from "react";
-
 import WeatherApp from "./WeatherApp";
 import Player from "./Player";
 import Footer from "./Footer";

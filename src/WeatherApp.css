@@ -44,3 +44,11 @@
   font-family: "Montserrat Subrayada", sans-serif;
   font-size: 4.4rem;
 }
+
+.WeatherApp .details {
+  margin-top: 20px;
+}
+
+.WeatherApp .detail-text {
+  font-weight: 700;
+}
