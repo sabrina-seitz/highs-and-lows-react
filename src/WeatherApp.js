@@ -35,18 +35,18 @@ export default function WeatherApp() {
       <Date />
       <Form />
       <Forecast />
-      <div class="details row">
-        <div class="col-4">
-          <span class="detail-text">Today: </span>
+      <div className="details row">
+        <div className="col-4">
+          <span className="detail-text">Today: </span>
           <br />
           {weatherData.tempMin}°/{weatherData.tempMax}°
         </div>
-        <div class="col-4">
-          <span class="detail-text">Wind: </span>
+        <div className="col-4">
+          <span className="detail-text">Wind: </span>
           <br /> {weatherData.wind} km/h
         </div>
-        <div class="col-4">
-          <span class="detail-text">Humidity:</span> <br />
+        <div className="col-4">
+          <span className="detail-text">Humidity:</span> <br />
           {weatherData.humidity} %
         </div>
       </div>
