@@ -2,7 +2,6 @@ import React from "react";
 
 import TempUnits from "./TempUnits";
 import Date from "./Date";
-import Form from "./Form";
 import Forecast from "./Forecast";
 
 import "./WeatherApp.css";
@@ -33,7 +32,39 @@ export default function WeatherApp() {
       <div className="description">{weatherData.description}</div>
       <div className="temp">{weatherData.tempNow}°</div>
       <Date />
-      <Form />
+      <div className="form">
+        <div className="row align-items-baseline">
+          <div className="col-2">
+            <button className="btn search-location">
+              <i className="fas fa-compass"></i>
+            </button>
+          </div>
+          <div className="col-10">
+            <div className="search">
+              <form>
+                <div className="input-group mb-3">
+                  <input
+                    className="form-control"
+                    type="search"
+                    placeholder="Another city"
+                    autoComplete="off"
+                    autoFocus="on"
+                  />
+                  <div className="input-group-append">
+                    <button
+                      className="btn form-button"
+                      type="submit"
+                      id="button"
+                    >
+                      <i className="fas fa-search search-icon"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       <Forecast />
       <div className="details row">
         <div className="col-4">

@@ -52,3 +52,33 @@
 .WeatherApp .detail-text {
   font-weight: 700;
 }
+
+.WeatherApp .search form {
+  margin-bottom: 60px;
+  margin-left: -7px;
+}
+
+@media (min-width: 576px) {
+  .WeatherApp .search form {
+    margin-bottom: 80px;
+    margin-left: -7px;
+  }
+}
+
+.WeatherApp .search button {
+  cursor: pointer;
+  background-color: #fff;
+  outline: #fff;
+}
+
+.form .search-location {
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  position: relative;
+  bottom: 1.9px;
+}
+
+.form .search-location:hover {
+  color: #dddddd;
+}
