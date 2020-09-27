@@ -10,7 +10,7 @@ export default function App() {
     <div className="App container">
       <div className="row no-gutters">
         <div className="col-xs-12 col-sm-7">
-          <WeatherApp />
+          <WeatherApp defaultCity="Munich" />
         </div>
         <div className="col-xs-12 col-sm-5 align-self-end">
           <Player />
