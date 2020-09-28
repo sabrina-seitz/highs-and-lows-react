@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TempUnits from "./TempUnits";
-import Date from "./Date";
+import FormatDate from "./FormatDate";
 import Forecast from "./Forecast";
 import "./WeatherIcon";
 import "./WeatherApp.css";
@@ -22,6 +22,7 @@ export default function WeatherApp(props) {
       iconCode: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -39,7 +40,7 @@ export default function WeatherApp(props) {
         </div>
         <div className="description">{weatherData.description}</div>
         <div className="temp">{Math.round(weatherData.tempNow)}°</div>
-        <Date />
+        <FormatDate date={weatherData.date} />
         <div className="form">
           <div className="row align-items-baseline">
             <div className="col-2">
