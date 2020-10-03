@@ -9,8 +9,23 @@ import "./WeatherApp.css";
 import axios from "axios";
 
 export default function WeatherApp(props) {
-  // const [city, setCity] = useState(null);
+  const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search(city);
+  }
+
+  function search() {
+    const apiKey = "e5551b43cbca96dceabb04d6c75c6371";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
 
   function displayWeather(response) {
     console.log(response.data);
@@ -31,9 +46,9 @@ export default function WeatherApp(props) {
   if (weatherData.ready) {
     return (
       <div className="WeatherApp">
-        <div className="row justify-content-between head">
-          <div className="col-4 city">{weatherData.city}</div>
-          <div className="col-4">
+        <div className="d-flex flex-row bd-highlight mb-3 justify-content-between head">
+          <div className="p-6 bd-highlight city">{weatherData.city}</div>
+          <div className="p-6 bd-highlight">
             <TempUnits />
           </div>
         </div>
@@ -48,8 +63,7 @@ export default function WeatherApp(props) {
             </div>
             <div className="col-10">
               <div className="search">
-                {/* <form onSubmit={handleSubmit}> */}
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="input-group mb-3">
                     <input
                       className="form-control"
@@ -57,7 +71,7 @@ export default function WeatherApp(props) {
                       placeholder="Another city"
                       autoComplete="off"
                       autoFocus="on"
-                      // onChange={updateCity}
+                      onChange={updateCity}
                     />
                     <div className="input-group-append">
                       <button
@@ -79,19 +93,7 @@ export default function WeatherApp(props) {
       </div>
     );
   } else {
-    const apiKey = "e5551b43cbca96dceabb04d6c75c6371";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayWeather);
-
+    search();
     return "Loading ...";
   }
-
-  //   function handleSubmit(event) {
-  //     event.preventDefault();
-
-  // }
-
-  // function updateCity(event) {
-  //   setCity(event.target.value);
-  // }
 }
