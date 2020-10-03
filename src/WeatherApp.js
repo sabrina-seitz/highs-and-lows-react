@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import TempUnits from "./TempUnits";
+import WeatherNow from "./WeatherNow";
 import FormatDate from "./FormatDate";
 import Forecast from "./Forecast";
+import WeatherDetails from "./WeatherDetails";
 import "./WeatherIcon";
 import "./WeatherApp.css";
 import axios from "axios";
@@ -35,11 +37,7 @@ export default function WeatherApp(props) {
             <TempUnits />
           </div>
         </div>
-        <div className="icon">
-          <i className="fas fa-cloud" alt={weatherData.description}></i>
-        </div>
-        <div className="description">{weatherData.description}</div>
-        <div className="temp">{Math.round(weatherData.tempNow)}°</div>
+        <WeatherNow data={weatherData} />
         <FormatDate date={weatherData.date} />
         <div className="form">
           <div className="row align-items-baseline">
@@ -77,22 +75,7 @@ export default function WeatherApp(props) {
           </div>
         </div>
         <Forecast />
-        <div className="details row">
-          <div className="col-4">
-            <span className="detail-text">Today: </span>
-            <br />
-            {Math.round(weatherData.tempMin)}°/{Math.round(weatherData.tempMax)}
-            °
-          </div>
-          <div className="col-4">
-            <span className="detail-text">Wind: </span>
-            <br /> {Math.round(weatherData.wind)} km/h
-          </div>
-          <div className="col-4">
-            <span className="detail-text">Humidity:</span> <br />
-            {weatherData.humidity} %
-          </div>
-        </div>
+        <WeatherDetails data={weatherData} />
       </div>
     );
   } else {

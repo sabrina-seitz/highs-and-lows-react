@@ -1,0 +1,19 @@
+.WeatherNow .icon i {
+  font-size: 12rem;
+  margin-top: 10px;
+}
+
+.WeatherNow .description {
+  font-size: 1.3rem;
+  margin-bottom: 7px;
+  text-transform: capitalize;
+  margin-bottom: -24px;
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+
+.WeatherNow .temp {
+  clear: both;
+  margin-bottom: -22px;
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 4.4rem;
+}
