@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import TempUnits from "./TempUnits";
 import WeatherNow from "./WeatherNow";
 import FormatDate from "./FormatDate";
 import Forecast from "./Forecast";
@@ -11,6 +10,29 @@ import axios from "axios";
 export default function WeatherApp(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [conversion, setConversion] = useState({
+    unit: "celsius",
+    celsiusActive: "active",
+    fahrenheitActive: "inactive",
+  });
+
+  function showFahrenheit(event) {
+    event.preventDefault();
+    setConversion({
+      unit: "fahrenheit",
+      celsiusActive: "inactive",
+      fahrenheitActive: "active",
+    });
+  }
+
+  function showCelsius(event) {
+    event.preventDefault();
+    setConversion({
+      unit: "celsius",
+      celsiusActive: "active",
+      fahrenheitActive: "inactive",
+    });
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -48,10 +70,26 @@ export default function WeatherApp(props) {
         <div className="d-flex flex-row bd-highlight mb-3 justify-content-between head">
           <div className="p-6 bd-highlight city">{weatherData.city}</div>
           <div className="p-6 bd-highlight">
-            <TempUnits />
+            <span className="temp-units">
+              <a
+                className={conversion.celsiusActive}
+                href="/"
+                onClick={showCelsius}
+              >
+                °C
+              </a>
+              /
+              <a
+                className={conversion.fahrenheitActive}
+                href="/"
+                onClick={showFahrenheit}
+              >
+                °F
+              </a>
+            </span>
           </div>
         </div>
-        <WeatherNow data={weatherData} />
+        <WeatherNow data={weatherData} unit={conversion.unit} />
         <FormatDate date={weatherData.date} />
         <div className="form">
           <div className="row align-items-baseline">
@@ -87,8 +125,8 @@ export default function WeatherApp(props) {
             </div>
           </div>
         </div>
-        <Forecast />
-        <WeatherDetails data={weatherData} />
+        <Forecast unit={conversion.unit} />
+        <WeatherDetails data={weatherData} unit={conversion.unit} />
       </div>
     );
   } else {

@@ -46,3 +46,26 @@
 .form .search-location:hover {
   color: #dddddd;
 }
+
+.temp-units {
+  float: right;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.temp-units .active {
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  cursor: default;
+}
+
+.temp-units .active:hover {
+  text-decoration: none;
+}
+
+.temp-units .inactive {
+  text-decoration: none;
+  font-weight: 300;
+  color: #fff;
+}
