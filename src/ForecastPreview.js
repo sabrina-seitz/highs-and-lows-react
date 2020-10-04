@@ -26,7 +26,7 @@ export default function ForecastPreview(props) {
       <div className="ForecastPreview col">
         {hours()}
         <WeatherIcon code={props.data.weather[0].icon} />
-        {celsius(props.data.main.temp)}
+        {celsius()}
       </div>
     );
   } else {
@@ -34,7 +34,7 @@ export default function ForecastPreview(props) {
       <div className="ForecastPreview col">
         {hours()}
         <WeatherIcon code={props.data.weather[0].icon} />
-        {fahrenheit(props.data.main.temp)}
+        {fahrenheit()}
       </div>
     );
   }

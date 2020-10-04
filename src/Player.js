@@ -130,7 +130,7 @@ export default function Player(props) {
           width="300"
           height="80"
           frameBorder="0"
-          allowTransparency="true"
+          allowtransparency="true"
           allow="encrypted-media"
         ></iframe>
       </div>
