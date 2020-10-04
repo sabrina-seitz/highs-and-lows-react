@@ -129,8 +129,9 @@ export default function WeatherApp(props) {
                   </div>
                 </div>
               </div>
-              <Forecast unit={conversion.unit} />
               <WeatherDetails data={weatherData} unit={conversion.unit} />
+              <hr />
+              <Forecast city={weatherData.city} unit={conversion.unit} />
             </div>
           </div>
           <div className="col-xs-12 col-sm-5 align-self-end">

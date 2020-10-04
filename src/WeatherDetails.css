@@ -1,5 +1,6 @@
 .WeatherDetails .details {
-  margin-top: 20px;
+  margin-top: -50px;
+  margin-bottom: 18px;
 }
 
 .WeatherDetails .detail-text {
