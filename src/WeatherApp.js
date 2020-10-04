@@ -28,7 +28,6 @@ export default function WeatherApp(props) {
   }
 
   function displayWeather(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       tempNow: response.data.main.temp,
@@ -36,7 +35,7 @@ export default function WeatherApp(props) {
       tempMax: response.data.main.temp_max,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      iconCode: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
