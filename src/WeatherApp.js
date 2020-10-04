@@ -3,6 +3,7 @@ import WeatherNow from "./WeatherNow";
 import FormatDate from "./FormatDate";
 import Forecast from "./Forecast";
 import WeatherDetails from "./WeatherDetails";
+import Player from "./Player";
 import "./WeatherIcon";
 import "./WeatherApp.css";
 import axios from "axios";
@@ -67,66 +68,75 @@ export default function WeatherApp(props) {
   if (weatherData.ready) {
     return (
       <div className="WeatherApp">
-        <div className="d-flex flex-row bd-highlight mb-3 justify-content-between head">
-          <div className="p-6 bd-highlight city">{weatherData.city}</div>
-          <div className="p-6 bd-highlight">
-            <span className="temp-units">
-              <a
-                className={conversion.celsiusActive}
-                href="/"
-                onClick={showCelsius}
-              >
-                °C
-              </a>
-              /
-              <a
-                className={conversion.fahrenheitActive}
-                href="/"
-                onClick={showFahrenheit}
-              >
-                °F
-              </a>
-            </span>
-          </div>
-        </div>
-        <WeatherNow data={weatherData} unit={conversion.unit} />
-        <FormatDate date={weatherData.date} />
-        <div className="form">
-          <div className="row align-items-baseline">
-            <div className="col-2">
-              <button className="btn search-location">
-                <i className="fas fa-compass"></i>
-              </button>
-            </div>
-            <div className="col-10">
-              <div className="search">
-                <form onSubmit={handleSubmit}>
-                  <div className="input-group mb-3">
-                    <input
-                      className="form-control"
-                      type="search"
-                      placeholder="Another city"
-                      autoComplete="off"
-                      autoFocus="on"
-                      onChange={updateCity}
-                    />
-                    <div className="input-group-append">
-                      <button
-                        className="btn form-button"
-                        type="submit"
-                        id="button"
-                      >
-                        <i className="fas fa-search search-icon"></i>
-                      </button>
+        <div className="row no-gutters">
+          <div className="col-xs-12 col-sm-7">
+            <div className="weather">
+              <div className="d-flex flex-row bd-highlight mb-3 justify-content-between head">
+                <div className="p-6 bd-highlight city">{weatherData.city}</div>
+                <div className="p-6 bd-highlight">
+                  <span className="temp-units">
+                    <a
+                      className={conversion.celsiusActive}
+                      href="/"
+                      onClick={showCelsius}
+                    >
+                      °C
+                    </a>
+                    /
+                    <a
+                      className={conversion.fahrenheitActive}
+                      href="/"
+                      onClick={showFahrenheit}
+                    >
+                      °F
+                    </a>
+                  </span>
+                </div>
+              </div>
+              <WeatherNow data={weatherData} unit={conversion.unit} />
+              <FormatDate date={weatherData.date} />
+              <div className="form">
+                <div className="row align-items-baseline">
+                  <div className="col-2">
+                    <button className="btn search-location">
+                      <i className="fas fa-compass"></i>
+                    </button>
+                  </div>
+                  <div className="col-10">
+                    <div className="search">
+                      <form onSubmit={handleSubmit}>
+                        <div className="input-group mb-3">
+                          <input
+                            className="form-control"
+                            type="search"
+                            placeholder="Another city"
+                            autoComplete="off"
+                            autoFocus="on"
+                            onChange={updateCity}
+                          />
+                          <div className="input-group-append">
+                            <button
+                              className="btn form-button"
+                              type="submit"
+                              id="button"
+                            >
+                              <i className="fas fa-search search-icon"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
+              <Forecast unit={conversion.unit} />
+              <WeatherDetails data={weatherData} unit={conversion.unit} />
             </div>
           </div>
+          <div className="col-xs-12 col-sm-5 align-self-end">
+            <Player code={weatherData.icon} />
+          </div>
         </div>
-        <Forecast unit={conversion.unit} />
-        <WeatherDetails data={weatherData} unit={conversion.unit} />
       </div>
     );
   } else {

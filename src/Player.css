@@ -12,5 +12,25 @@
     padding: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     margin: 0;
+    text-align: left;
+  }
+}
+
+.player-text h3 {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 1.9rem;
+}
+
+.player-text .text-player {
+  margin-bottom: 15px;
+}
+
+.player-spotify iframe {
+  width: 215px;
+}
+
+@media (min-width: 800px) {
+  .player-spotify iframe {
+    width: 300px;
   }
 }

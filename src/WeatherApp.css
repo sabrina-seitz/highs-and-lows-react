@@ -1,4 +1,4 @@
-.WeatherApp {
+.weather {
   padding: 20px;
   color: #fff;
   background: #28385e;
@@ -9,13 +9,13 @@
 }
 
 @media (min-width: 576px) {
-  .WeatherApp {
+  .weather {
     padding: 50px;
     margin: 50px 25px 0 0;
   }
 }
 
-.WeatherApp .head .city {
+.weather .head .city {
   text-transform: uppercase;
   font-size: 1.25rem;
   overflow-wrap: break-word;
@@ -24,18 +24,18 @@
   float: left;
 }
 
-.WeatherApp .search form {
+.weather .search form {
   margin-bottom: 80px;
   margin-left: -7px;
 }
 
-.WeatherApp .search button {
+.weather .search button {
   cursor: pointer;
   background-color: #fff;
   outline: #fff;
 }
 
-.form .search-location {
+.weather .form .search-location {
   color: #fff;
   font-size: 2.2rem;
   cursor: pointer;
@@ -43,28 +43,28 @@
   bottom: 1.9px;
 }
 
-.form .search-location:hover {
+.weather .form .search-location:hover {
   color: #dddddd;
 }
 
-.temp-units {
+.weather .temp-units {
   float: right;
   font-size: 1.25rem;
   font-weight: 400;
 }
 
-.temp-units .active {
+.weather .temp-units .active {
   font-weight: 600;
   text-decoration: none;
   color: #fff;
   cursor: default;
 }
 
-.temp-units .active:hover {
+.weather .temp-units .active:hover {
   text-decoration: none;
 }
 
-.temp-units .inactive {
+.weather .temp-units .inactive {
   text-decoration: none;
   font-weight: 300;
   color: #fff;
