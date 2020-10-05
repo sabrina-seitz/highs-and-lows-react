@@ -35,6 +35,17 @@ export default function WeatherApp(props) {
     });
   }
 
+  function searchGeolocation(position) {
+    const apiKey = "e5551b43cbca96dceabb04d6c75c6371";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
+  }
+
+  function getGeolocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchGeolocation);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     search(city);
@@ -98,7 +109,10 @@ export default function WeatherApp(props) {
               <div className="form">
                 <div className="row align-items-baseline">
                   <div className="col-2">
-                    <button className="btn search-location">
+                    <button
+                      className="btn search-location"
+                      onClick={getGeolocation}
+                    >
                       <i className="fas fa-compass"></i>
                     </button>
                   </div>

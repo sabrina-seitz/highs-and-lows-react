@@ -1,14 +1,24 @@
 .WeatherNow .description {
-  font-size: 1.3rem;
-  margin-bottom: 7px;
+  font-size: 1.22rem;
   text-transform: capitalize;
   margin-bottom: -24px;
   font-family: "Montserrat Subrayada", sans-serif;
+}
+@media (min-width: 576px) {
+  .WeatherNow .description {
+    font-size: 1.3rem;
+  }
 }
 
 .WeatherNow .temp {
   clear: both;
   margin-bottom: -22px;
   font-family: "Montserrat Subrayada", sans-serif;
-  font-size: 4.4rem;
+  font-size: 4rem;
+}
+
+@media (min-width: 576px) {
+  .WeatherNow .temp {
+    font-size: 4.4rem;
+  }
 }

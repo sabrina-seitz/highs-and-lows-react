@@ -24,13 +24,3 @@
 .player-text .text-player {
   margin-bottom: 15px;
 }
-
-.player-spotify iframe {
-  width: 215px;
-}
-
-@media (min-width: 800px) {
-  .player-spotify iframe {
-    width: 300px;
-  }
-}
