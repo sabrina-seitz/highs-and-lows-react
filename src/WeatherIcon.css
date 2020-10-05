@@ -1,6 +1,7 @@
 .WeatherIcon i {
   font-size: 7rem;
   margin: 5px auto;
+  margin-top: -3px;
 }
 
 @media (min-width: 576px) {
