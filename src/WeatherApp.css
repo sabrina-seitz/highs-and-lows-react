@@ -15,7 +15,7 @@
   }
 }
 
-.weather .head .city {
+.weather .city {
   text-transform: uppercase;
   font-size: 1.25rem;
   overflow-wrap: break-word;
